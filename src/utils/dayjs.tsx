@@ -85,6 +85,7 @@ dayjs.extend(duration);
 const DayjsContext =
   React.createContext<{
     dayjs: (date?: dayjs.ConfigType) => dayjs.Dayjs;
+    weekdays: string[];
     weekStartsOn: StartOfWeek;
     timeFormat: TimeFormat;
     setWeekStartsOn: React.Dispatch<
@@ -141,6 +142,7 @@ export const DayjsProvider: React.VoidFunctionComponent<{
     <DayjsContext.Provider
       value={{
         dayjs,
+        weekdays: dayjs.weekdays(),
         weekStartsOn: weekStartsOn ?? localeConfig.weekStartsOn,
         timeFormat: timeFormat ?? localeConfig.timeFormat,
         setWeekStartsOn,
