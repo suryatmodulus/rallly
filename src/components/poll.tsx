@@ -235,7 +235,7 @@ const PollPage: NextPage = () => {
                 </div>
               </div>
               {participants ? (
-                <div className="py-8">
+                <div className="sm:py-8">
                   <div
                     className="line-pattern absolute -left-full -z-10 hidden -translate-y-8 sm:block"
                     style={{
